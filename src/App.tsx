@@ -34,6 +34,8 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 import { Routes } from "./pages/routes";
+import Start from "./pages/start";
+import SignIn from "./pages/signin";
 
 setupIonicReact();
 
