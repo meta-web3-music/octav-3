@@ -1,5 +1,13 @@
-tasks:
-  - init: npm i
-    command: npm run dev
+image: gitpod/workspace-full:latest
 
+tasks:
+  - name: Dev env
+    init: yarn
+    command: yarn dev
+
+ports:
+  - name: Frontend
+    description: Port 5173 for the frontend
+    port: 5173
+    onOpen: open-preview
 

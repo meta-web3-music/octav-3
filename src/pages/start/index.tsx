@@ -1,58 +1,34 @@
-import {
-  IonTabs,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonLabel,
-} from "@ionic/react";
-import { IonReactRouter } from "@ionic/react-router";
 import React from "react";
-import { Redirect, Route } from "react-router";
-import Home from "../home";
+import { Outlet } from "react-router-dom";
 
 const Start: React.FC = () => {
   return (
-    <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Redirect exact path="/start" to="/start/home" />
-          <Route exact path="/start/home">
-            <Home />
-          </Route>
-        </IonRouterOutlet>
+    <div>
+      <Outlet />
 
-        <IonTabBar slot="bottom">
-          <IonTabButton
-            tab="home"
-            className="text-[#8A8B8F]"
-            href="/start/home"
-          >
-            <span className="text-xl">
-              <span className="iconify" data-icon="fluent:home-32-regular" />
-            </span>
-            <IonLabel>Home</IonLabel>
-          </IonTabButton>
+      <div className="flex justify-around border-t-2 py-4 border-solid border-[#AAAAAA26] fixed bottom-0 w-[100vw]">
+        <button className="text-[#8A8B8F] flex flex-col items-center w-1/3">
+          <span className="text-xl">
+            <span className="iconify" data-icon="fluent:home-32-regular" />
+          </span>
+          <label className="text-xs">Home</label>
+        </button>
 
-          <IonTabButton tab="radio" href="/radio" className="text-[#8A8B8F]">
-            <span className="text-xl">
-              <span className="iconify" data-icon="mdi:compass-outline" />
-            </span>
-            <IonLabel>Discover</IonLabel>
-          </IonTabButton>
+        <button className="text-[#8A8B8F] flex flex-col items-center w-1/3 mt-[1px]">
+          <span className="text-xl">
+            <span className="iconify" data-icon="mdi:compass-outline" />
+          </span>
+          <label className="text-xs">Discover</label>
+        </button>
 
-          <IonTabButton
-            tab="library"
-            href="/library"
-            className="text-[#8A8B8F]"
-          >
-            <span className="text-xl">
-              <span className="iconify" data-icon="ic:outline-notifications" />
-            </span>
-            <IonLabel>Notifications</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
+        <button className="text-[#8A8B8F] flex flex-col items-center w-1/3 mr-1">
+          <span className="text-xl">
+            <span className="iconify" data-icon="ic:outline-notifications" />
+          </span>
+          <label className="text-xs">Notifications</label>
+        </button>
+      </div>
+    </div>
   );
 };
 
