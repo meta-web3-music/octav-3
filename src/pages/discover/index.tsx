@@ -57,10 +57,10 @@ const discover: React.FC = () => {
               key={i}
               className="flex flex-col items-center justify-center p-2 w-32 rounded-lg border bg-trueGray-300"
             >
-              <div className="relative w-20 h-20 bg-[#D9D9D9] rounded-full overflow-hidden">
+              <div className="relative w-20 h-20">
                 <img
                   src="/images/drake.jpeg"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover rounded-full"
                 />
                 <div className="absolute bottom-1 left-1 rounded-full text-[#a49e1e] w-5 h-5 flex items-center justify-center">
                   <span
