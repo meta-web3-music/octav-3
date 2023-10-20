@@ -5,6 +5,7 @@ import Home from "./home";
 import Artist from "./artist";
 import Posts from "./posts";
 import Fandom from "./fandom";
+import Notifications from "./notifications";
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +13,7 @@ export const router = createBrowserRouter([
     element: <Start />,
     children: [
       { path: "home", element: <Home /> },
+      { path: "notifications", element: <Notifications /> },
       { path: "", element: <Navigate to="home" /> },
     ],
   },
