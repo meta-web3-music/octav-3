@@ -1,10 +1,12 @@
-const artists = [0, 0, 2];
+const artists = [0, 0, 2, 3, 0];
 const discover: React.FC = () => {
   return (
     <>
       <header>
         <div className="flex p-4 items-center relative font-figtree">
-          <p className="absolute left-[50%] translate-x-[-50%] text-xl">Home</p>
+          <p className="absolute left-[50%] translate-x-[-50%] text-xl">
+            Discover
+          </p>
           <img
             src="/images/profile_octav3.png"
             className="w-6 rounded-full ml-auto"
@@ -17,7 +19,7 @@ const discover: React.FC = () => {
         <div>
           <label
             htmlFor="default-search"
-            className="mb-2 text-sm font-medium text-trueGray-800 sr-only dark:text-white"
+            className="mb-2 text-sm font-medium text-trueGray-800 sr-only dark:text-black"
           >
             Search
           </label>
@@ -32,9 +34,9 @@ const discover: React.FC = () => {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                 />
               </svg>
@@ -42,20 +44,21 @@ const discover: React.FC = () => {
             <input
               type="search"
               id="default-search"
-              className="block w-full p-4 pl-10 text-sm text-gray-900 rounded-full bg-gray-50 focus:trueGray-800 focus:trueGray-800 dark:trueGray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:trueGray-800 dark:focus:border-trueGray-800"
-              placeholder="Search Mockups, Logos..."
+              className="block w-full p-4 pl-10 text-sm text-gray-900 rounded-full bg-gray-50 focus:outline-none focus:ring-0 focus:border-gray-300 dark:bg-trueGray-800 dark:border-black dark:placeholder-gray-400 dark:text-black"
+              placeholder="Search"
               required
             />
           </div>
         </div>
+
         <div className="my-5"></div>
 
         {/* Horizontal Profile Cards*/}
-        <div className="grid grid-cols-3 gap-28 overflow-x-scroll">
+        <div className="flex gap-5 overflow-x-scroll">
           {artists.map((_e, i) => (
             <div
               key={i}
-              className="flex flex-col items-center justify-center p-2 w-32 rounded-lg border bg-trueGray-300"
+              className="flex flex-col items-center justify-center p-2 px-16 w-32 rounded-lg border bg-trueGray-300"
             >
               <div className="relative w-20 h-20">
                 <img
@@ -71,12 +74,12 @@ const discover: React.FC = () => {
               </div>
               <div className="my-2"></div>
               <p className="text-center text-black">Drake</p>
-              <p className="text-center text-xs text-black whitespace-nowrap">
+              <p className="text-center text-xs text-[#666666] whitespace-nowrap">
                 110k members
               </p>
               <div className="mt-2"></div>
               <button className="w-16 rounded-full bg-black text-white">
-                join
+                Join
               </button>
             </div>
           ))}
@@ -91,7 +94,7 @@ const discover: React.FC = () => {
         <div className="my-5"></div>
 
         {/*Vertical Profile Cards */}
-        <div className="grid grid-rows mb-16">
+        <div className="grid grid-rows gap-4 mb-16">
           {artists.map((_e, i) => (
             <div
               key={i}
@@ -111,13 +114,13 @@ const discover: React.FC = () => {
               </div>
               <div className="ml-3">
                 <p className="text-black">Drake</p>
-                <p className="text-xs text-black whitespace-nowrap">
+                <p className="text-xs text-[#666666] whitespace-nowrap">
                   110k members
                 </p>
               </div>
               <div className="mt-2 ml-28">
                 <button className="w-16 rounded-full bg-black text-white">
-                  join
+                  Join
                 </button>
               </div>
             </div>
