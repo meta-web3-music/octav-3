@@ -1,4 +1,6 @@
-const Post = () => {
+import { FC, PropsWithChildren } from "react";
+
+const Post: FC<PropsWithChildren> = (p) => {
   return (
     <div className="border-2 border-[#D9D9D9] rounded-xl p-3 mt-3">
       {/* Post header */}
@@ -46,6 +48,7 @@ const Post = () => {
         tempor incididunt ut labore et dolore magna aliqau. Ut enim... view
       </p>
       <div className="my-2" />
+      {p.children}
       <div className="flex text-[#00000099]">
         <div className="flex items-center">
           <span className="iconify" data-icon="basil:comment-outline"></span>

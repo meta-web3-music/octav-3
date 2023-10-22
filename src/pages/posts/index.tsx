@@ -1,4 +1,5 @@
 import Post from "./Post";
+import PostProducts from "./PostProducts";
 
 const Posts = () => {
   return (
@@ -13,7 +14,9 @@ const Posts = () => {
       </div>
 
       <div className="my-2"></div>
-      <Post />
+      <Post>
+        <PostProducts />
+      </Post>
       <Post />
     </div>
   );
