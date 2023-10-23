@@ -7,6 +7,7 @@ import Artist from "./artist";
 import Posts from "./posts";
 import Fandom from "./fandom";
 import Notifications from "./notifications";
+import Music from "./music";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
       {
         path: "fandom",
         element: <Fandom />,
+      },
+      {
+        path: "music",
+        element: <Music />,
       },
       {
         path: "",
