@@ -7,7 +7,7 @@ const Start: React.FC = () => {
     <div>
       <Outlet />
 
-      <div className="flex justify-around border-t-2 py-4 border-solid border-[#AAAAAA26] fixed bottom-0 w-[100vw]">
+      <div className="flex justify-around border-t-2 py-4 border-solid border-[#AAAAAA26] fixed bottom-0 w-[100vw] bg-white">
         <Nav path="/start/home" icon="fluent:home-32-regular">
           Home
         </Nav>
