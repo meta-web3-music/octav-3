@@ -2,6 +2,7 @@ import { Navigate, createBrowserRouter } from "react-router-dom";
 import Start from "./start";
 import SignIn from "./signin";
 import Home from "./home";
+import Discover from "./discover";
 import Artist from "./artist";
 import Posts from "./posts";
 import Fandom from "./fandom";
@@ -12,7 +13,8 @@ export const router = createBrowserRouter([
     path: "/start",
     element: <Start />,
     children: [
-      { path: "home", element: <Home /> },
+      { path: "home", element: <Home />},
+      { path: "discover", element: <Discover />},
       { path: "notifications", element: <Notifications /> },
       { path: "", element: <Navigate to="home" /> },
     ],
