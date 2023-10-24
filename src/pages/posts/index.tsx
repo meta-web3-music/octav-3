@@ -1,4 +1,4 @@
-import Post from "./Post";
+import Post from "../components/Post";
 import PostProducts from "./PostProducts";
 
 const Posts = () => {
@@ -14,10 +14,24 @@ const Posts = () => {
       </div>
 
       <div className="my-2"></div>
-      <Post>
+      <Post
+        author="Drake"
+        postedAgo="2h"
+        comments={68}
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqau. Ut enim"
+        title="Check out my new merch"
+        likes={164}
+      >
         <PostProducts />
       </Post>
-      <Post />
+      <Post
+        author="Drake"
+        postedAgo="5d"
+        comments={68}
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqau. Ut enim"
+        title="Title"
+        likes={164}
+      ></Post>
     </div>
   );
 };
