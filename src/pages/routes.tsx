@@ -8,14 +8,15 @@ import Posts from "./posts";
 import Fandom from "./fandom";
 import Notifications from "./notifications";
 import Music from "./music";
+import Others from "./others";
 
 export const router = createBrowserRouter([
   {
     path: "/start",
     element: <Start />,
     children: [
-      { path: "home", element: <Home />},
-      { path: "discover", element: <Discover />},
+      { path: "home", element: <Home /> },
+      { path: "discover", element: <Discover /> },
       { path: "notifications", element: <Notifications /> },
       { path: "", element: <Navigate to="home" /> },
     ],
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
       {
         path: "music",
         element: <Music />,
+      },
+      {
+        path: "others",
+        element: <Others />,
       },
       {
         path: "",
